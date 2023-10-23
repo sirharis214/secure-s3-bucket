@@ -9,10 +9,10 @@ phases:
       - ./configure-aws.sh
   
   build:
-    commnads:
+    commands:
       - ./apply-terraform.sh
   
   post_build:
-    commnads:
+    commands:
       - rm -rf .git
       - rm -rf .terraform/plugins
