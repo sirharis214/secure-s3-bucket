@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - cd cicd
+      - chmod +x install-terraform.sh configure-aws.sh plan-terraform.sh
+      - ./install-terraform.sh
+      # - ./configure-aws.sh
+  
+  build:
+    commands:
+      - ./plan-terraform.sh
+  
+  post_build:
+    commands:
+      - rm -rf .git
+      - rm -rf .terraform/plugins
