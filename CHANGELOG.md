@@ -2,3 +2,4 @@
 
 * state of CHANGELOG.md
 * update logs for codebuild project
+* updated buildspec-plan.yml for storing artifacts
