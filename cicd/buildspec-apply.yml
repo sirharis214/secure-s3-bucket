@@ -6,7 +6,7 @@ phases:
       - cd cicd
       - chmod +x install-terraform.sh configure-aws.sh apply-terraform.sh
       - ./install-terraform.sh
-      - ./configure-aws.sh
+      # - ./configure-aws.sh
   
   build:
     commands:
@@ -16,3 +16,6 @@ phases:
     commands:
       - rm -rf .git
       - rm -rf .terraform/plugins
+artifacts:
+  files:
+    - '**/*'
