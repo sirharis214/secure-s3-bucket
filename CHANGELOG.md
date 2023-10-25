@@ -3,4 +3,5 @@
 * state of CHANGELOG.md
 * update logs for codebuild project
 * updated buildspec-plan.yml for storing artifacts
-* removed S3 ACL 
+* removed S3 ACL
+* try CodeBuild-apply job
