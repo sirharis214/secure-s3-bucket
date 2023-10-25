@@ -16,3 +16,7 @@ phases:
     commands:
       - rm -rf .git
       - rm -rf .terraform/plugins
+artifacts:
+  files:
+    - '**/*'
+    
