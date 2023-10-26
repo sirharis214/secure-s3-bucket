@@ -3,14 +3,16 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      # - cd cicd
-      - chmod +x ./cicd/install-terraform.sh ./cicd/configure-aws.sh ./cicd/apply-terraform.sh
-      - ./cicd/install-terraform.sh
+      - cd cicd
+      - chmod +x install-terraform.sh configure-aws.sh apply-terraform.sh
+      - ./install-terraform.sh
       # - ./configure-aws.sh
   
   build:
     commands:
-      - ./cicd/apply-terraform.sh
+      - echo "Contents of the downloaded source:"
+      - ls -l
+      - ./apply-terraform.sh
   
   post_build:
     commands:
