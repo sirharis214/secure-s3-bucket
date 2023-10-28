@@ -10,9 +10,10 @@ phases:
   
   build:
     commands:
-      - echo "Contents of the downloaded source:"
-      - ls -l
-      - ./apply-terraform.sh
+      - echo "Contents of cicd/ :" && ls -l
+      - echo "Contents of the downloaded source:" && cd .. && ls -l
+      - terraform init
+      - ./cicd/apply-terraform.sh
   
   post_build:
     commands:
