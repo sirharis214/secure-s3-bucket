@@ -10,13 +10,13 @@ phases:
   
   build:
     commands:
+      - cd ..
       - ./plan-terraform.sh
   
   post_build:
     commands:
-      - echo "Contents of .git :" && ls -l .git
       - rm -rf .git
-      # - rm -rf .terraform/plugins
+      - rm -rf .terraform/plugins
 artifacts:
   files:
     - '**/*'

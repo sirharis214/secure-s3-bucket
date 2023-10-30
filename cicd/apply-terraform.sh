@@ -7,7 +7,7 @@ set -eu
 # cd ..
 
 # init
-# terraform init
+terraform init
 
 # plan and apply
 terraform apply -auto-approve -no-color -input=false plan.out

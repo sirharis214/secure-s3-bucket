@@ -4,7 +4,7 @@
 set -eu
 
 # go to root; out of cicd dir
-cd ..
+# cd ..
 
 # init
 terraform init
