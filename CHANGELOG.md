@@ -7,3 +7,4 @@
 * try CodeBuild-apply job
 * added cache bucket to plan and apply
 * new kms ket encryption
+* re-structure both build specs
