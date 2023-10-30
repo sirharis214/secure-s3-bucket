@@ -8,3 +8,4 @@
 * added cache bucket to plan and apply
 * new kms ket encryption
 * re-structure both build specs
+* provider assume role tf_management
