@@ -10,8 +10,8 @@ phases:
   
   build:
     commands:
-      - echo "Contents of cicd/ :" && ls -l
-      - echo "Contents of the downloaded source:" && cd .. && ls -l
+      - echo "checking provider executable"
+      - ls -l .terraform/providers/registry.terraform.io/hashicorp/aws/5.14.0/linux_amd64
       - terraform init
       - ./cicd/apply-terraform.sh
   
