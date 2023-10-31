@@ -20,8 +20,8 @@ provider "aws" {
   # Update with your desired region
   region = "us-east-1"
   assume_role {
-    role_arn     = local.ROLE_ARN     # var.ROLE_ARN
-    external_id  = local.EXTERNAL_ID  # var.EXTERNAL_ID
+    role_arn     = var.ROLE_ARN
+    external_id  = var.EXTERNAL_ID
     session_name = "secure-s3-bucket-dev"     # repo-branch ; module-workspace
   }
 }
