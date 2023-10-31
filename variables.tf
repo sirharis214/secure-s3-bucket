@@ -1,7 +1,7 @@
 variable "EXTERNAL_ID" {
-  type = optional(string, null)
+  type = string
 }
 
 variable "ROLE_ARN" {
-  type = optional(string, null)
+  type = string
 }
