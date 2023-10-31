@@ -9,8 +9,9 @@ phases:
       - cd cicd
       - chmod +x install-terraform.sh configure-aws.sh plan-terraform.sh
       - ./install-terraform.sh
-      - export EXTERNAL_ID=$EXTERNAL_ID
-      - export ROLE_ARN=$ROLE_ARN
+      - export TF_VAR_EXTERNAL_ID=$EXTERNAL_ID
+      - export TF_VAR_ROLE_ARN=$ROLE_ARN
+      - echo $TF_VAR_EXTERNAL_ID
       # - ./configure-aws.sh
       # - export EXTERNAL_ID=$(aws secretsmanager get-secret-value --secret-id CodeBuild.AwsHarisSandbox.TerraformManagement.ExternalId --query SecretString --region us-east-1 --output text | cut -d '"' -f4 | tr -d '\n')
       # - export ROLE_ARN=$(aws secretsmanager get-secret-value --secret-id CodeBuild.AwsHarisSandbox.TerraformManagement.ExternalId --query SecretString --region us-east-1 --output text | cut -d '"' -f8 | tr -d '\n')
