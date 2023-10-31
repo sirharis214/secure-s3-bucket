@@ -9,3 +9,4 @@
 * new kms ket encryption
 * re-structure both build specs
 * provider assume role tf_management
+* test wrong external_id
