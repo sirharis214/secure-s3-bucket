@@ -7,7 +7,8 @@ phases:
       - chmod +x install-terraform.sh configure-aws.sh plan-terraform.sh
       - ./install-terraform.sh
       # - ./configure-aws.sh
-  
+      - export EXTERNAL_ID=$(aws secretsmanager get-secret-value --secret-id CodeBuild.AwsHarisSandbox.TerraformManagement.ExternalId --query SecretString --region us-east-1 --output text | cut -d '"' -f4 | tr -d '\n')
+      - export ROLE_ARN=$(aws secretsmanager get-secret-value --secret-id CodeBuild.AwsHarisSandbox.TerraformManagement.ExternalId --query SecretString --region us-east-1 --output text | cut -d '"' -f8 | tr -d '\n')
   build:
     commands:
       - cd ..
