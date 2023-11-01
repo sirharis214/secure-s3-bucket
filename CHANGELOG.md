@@ -10,6 +10,4 @@
 * re-structure both build specs
 * provider assume role tf_management
 * test wrong external_id
-* test change to permissions on role aws-haris-sandbox-terraform-management
-<!-- * works, now going to change permission to another IAM to ensure this time it fails -->
-
+* Secret Manager Role aws-haris-sandbox-terraform-management, allows role cicd to assume
