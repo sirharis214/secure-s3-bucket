@@ -11,3 +11,4 @@
 * provider assume role tf_management
 * test wrong external_id
 * Secret Manager Role aws-haris-sandbox-terraform-management, allows role cicd to assume
+* Going to keep the SM same, going to update the permission on who can assume to someone other than cicd
