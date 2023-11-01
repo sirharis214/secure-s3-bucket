@@ -11,3 +11,4 @@
 * provider assume role tf_management
 * test wrong external_id
 * Prin ARN cicd Condition
+* now updated who can assume tf-man to only allow main (not cicd)
