@@ -10,3 +10,4 @@
 * re-structure both build specs
 * provider assume role tf_management
 * test wrong external_id
+* test change to permissions on role aws-haris-sandbox-terraform-management
