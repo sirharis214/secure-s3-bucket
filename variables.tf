@@ -27,9 +27,9 @@ variable "enable_ss3_se" {
 }
 
 variable "kms_id" {
-  type = string
+  type        = string
   description = "If enable_ss3_se false, then provide KMS key id"
-  default = null
+  default     = null
 }
 
 variable "bucket_policy_document" {
