@@ -25,7 +25,7 @@ resource "aws_s3_bucket_public_access_block" "this" {
 }
 
 resource "aws_s3_bucket_policy" "this" {
-  for_each = var.bucket_policy_document == null ? [] : [1]
+  count = var.bucket_policy_document == null ? 0 : 1
 
   bucket = aws_s3_bucket.this.id
   policy = local.bucket_policy
