@@ -1,7 +1,7 @@
 locals {
   bucket_name = var.is_prefix ? lower(replace(substr(var.bucket_name, 0, 36), ".", "-")) : lower(replace(var.bucket_name, ".", "-"))
   bucket_policy = var.bucket_policy_document == null ? null : jsonencode({
-    Version = "2012-10-17"
+    Version   = "2012-10-17"
     Statement = jsondecode(var.bucket_policy_document).Statement
   })
 }
