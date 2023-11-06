@@ -35,5 +35,5 @@ variable "kms_id" {
 variable "bucket_policy_document" {
   type        = string
   description = "JSON string of a policy document with statements to apply to the bucket resource policy."
-  default     = "{\"Statement\":[]}"
+  default     = null # "{\"Statement\":[]}"
 }
